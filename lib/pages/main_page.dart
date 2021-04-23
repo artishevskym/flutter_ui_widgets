@@ -17,9 +17,9 @@ class MainPage extends StatelessWidget {
           border: Border.all(width: 2, color: Colors.red),
           color: Colors.green,
         ),
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
               color: Colors.blue,
