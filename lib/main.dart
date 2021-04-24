@@ -6,6 +6,7 @@ void main() => runApp(MyApp());
 final lightTheme = ThemeData(
   primaryColor: Colors.red,
   accentColor: Colors.green,
+  fontFamily: "Lato",
   textTheme: TextTheme(
     headline: TextStyle(fontSize: 24),
   )
