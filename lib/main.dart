@@ -6,6 +6,9 @@ void main() => runApp(MyApp());
 final lightTheme = ThemeData(
   primaryColor: Colors.red,
   accentColor: Colors.green,
+  textTheme: TextTheme(
+    headline: TextStyle(fontSize: 24),
+  )
 );
 
 class MyApp extends StatelessWidget {
