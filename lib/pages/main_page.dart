@@ -12,12 +12,20 @@ class MainPage extends StatelessWidget {
           width: 180,
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          ArticleCard(
-            article: articles[0],
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            ArticleCard(
+              article: articles[0],
+            ),
+            ArticleCard(
+              article: articles[1],
+            ),
+            ArticleCard(
+              article: articles[2],
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
