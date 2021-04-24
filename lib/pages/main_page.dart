@@ -7,7 +7,10 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter UI Widgets"),
+        title: Image.asset(
+          "assets/images/logo.png",
+          width: 180,
+        ),
       ),
       body: Column(
         children: <Widget>[
