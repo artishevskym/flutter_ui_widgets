@@ -71,6 +71,7 @@ class CardBanner extends StatelessWidget {
           ),
           child: Container(
             height: 200,
+            width: double.infinity,
             child: Image.network(
               imageUrl,
               fit: BoxFit.cover,
