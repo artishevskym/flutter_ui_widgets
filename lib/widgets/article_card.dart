@@ -13,7 +13,9 @@ class ArticleCard extends StatelessWidget {
       elevation: 4,
       child: Column(
         children: <Widget>[
-          CardBanner(),
+          CardBanner(
+            imageUrl: article.urlToImage,
+          ),
           CardDetail(article: article),
         ],
       ),
@@ -24,7 +26,7 @@ class ArticleCard extends StatelessWidget {
 class CardDetail extends StatelessWidget {
   final Article article;
 
-  const CardDetail({Key key, this.article}): super(key: key);
+  const CardDetail({Key key, this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,19 @@ class CardBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Placeholder(fallbackHeight: 200),
+        ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(4),
+            topRight: Radius.circular(4),
+          ),
+          child: Container(
+            height: 200,
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
         Positioned(
           top: 10,
           right: 10,
