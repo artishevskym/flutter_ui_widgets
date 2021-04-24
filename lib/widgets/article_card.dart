@@ -74,6 +74,10 @@ class CardBanner extends StatelessWidget {
             child: Image.network(
               imageUrl,
               fit: BoxFit.cover,
+              loadingBuilder: (context, child, progress) {
+                if (progress == null) return child;
+                return Center(child: CircularProgressIndicator());
+              },
             ),
           ),
         ),
