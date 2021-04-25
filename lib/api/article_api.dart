@@ -4,7 +4,7 @@ class ArticleAPI {
   Future<List<Article>> fetchArticles() async {
     bool success = true;
     if (success) {
-      final response = await Future.delayed(Duration(seconds: 10), () => articles);
+      final response = await Future.delayed(Duration(seconds: 2), () => articles);
       return response;
     } else {
       throw Exception("Failed to load Articles!");
