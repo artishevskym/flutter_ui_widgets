@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_widgets/models/article.dart';
+import 'package:flutter_ui_widgets/widgets/platform_spinner.dart';
 
 class ArticleCard extends StatelessWidget {
   final Article article;
@@ -122,7 +123,7 @@ class CardBanner extends StatelessWidget {
               fit: BoxFit.cover,
               loadingBuilder: (context, child, progress) {
                 if (progress == null) return child;
-                return Center(child: CircularProgressIndicator());
+                return Center(child: PlatformSpinner());
               },
             ),
           ),

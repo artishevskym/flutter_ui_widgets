@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_widgets/models/article.dart';
 import 'package:flutter_ui_widgets/repos/article_repo.dart';
 import 'package:flutter_ui_widgets/widgets/article_card.dart';
+import 'package:flutter_ui_widgets/widgets/platform_spinner.dart';
 
 import 'article_page.dart';
 
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
           );
         }
         return Center(
-          child: CircularProgressIndicator(),
+          child: PlatformSpinner(),
         );
       },
     );
