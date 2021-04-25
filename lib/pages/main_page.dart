@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_widgets/models/article.dart';
 import 'package:flutter_ui_widgets/widgets/article_card.dart';
 
+import 'create_article.dart';
 import 'home_page.dart';
 import 'inbox_page.dart';
 
@@ -40,7 +41,12 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          print("Clicked");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CreateArticle(),
+            ),
+          );
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
